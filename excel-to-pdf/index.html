@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      // Polyfill Promise.withResolvers for compatibility with older browsers/devices
+      if (typeof Promise.withResolvers === 'undefined') {
+        Promise.withResolvers = function () {
+          var resolve;
+          var reject;
+          var promise = new Promise(function (res, rej) {
+            resolve = res;
+            reject = rej;
+          });
+          return { promise: promise, resolve: resolve, reject: reject };
+        };
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>EasyAsPDF - Free Online PDF Tools | Merge, Compress, Convert</title>
+    <meta name="title" content="EasyAsPDF - Free Online PDF Tools | Merge, Compress, Convert" />
+    <meta name="description" content="EasyAsPDF is a free online PDF toolkit to merge, split, compress, watermark, rotate, and convert PDFs. Process files securely client-side in your browser offline without watermarks." />
+    <meta name="keywords" content="free online pdf toolkit no watermark, merge multiple pdf files into one, split pdf by page range offline, compress pdf to 200kb without losing quality, reduce pdf size client side, add watermark to pdf free online, convert jpg to pdf online free, image to pdf converter, free pdf editor no watermark, extract text from scanned pdf offline, ai ocr tool free, pdf to word converter free no signup, convert excel to pdf, rotate pdf pages permanently free, add page numbers to pdf, browser-based pdf editor, secure pdf tools gdpr compliant" />
+    <meta name="author" content="EasyAsPDF" />
+    <meta name="language" content="English" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="theme-color" content="#fdfdfd" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    
+    <!-- DNS Prefetch for faster resolution -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    </noscript>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://easyaspdf.com/" />
+    <meta property="og:title" content="EasyAsPDF - Free Online PDF Tools | Merge, Split, Compress" />
+    <meta property="og:description" content="EasyAsPDF is a free online PDF toolkit to merge, split, compress, watermark, rotate, and convert PDFs. Process files securely and offline in your browser." />
+    <meta property="og:site_name" content="EasyAsPDF" />
+    <meta property="og:locale" content="en_US" />
+    <!-- Uncomment and replace with your actual Open Graph image URL -->
+    <!-- <meta property="og:image" content="https://easyaspdf.com/og-image.png" /> -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://easyaspdf.com/" />
+    <meta property="twitter:title" content="EasyAsPDF - Free Online PDF Tools | Merge, Split, Compress" />
+    <meta property="twitter:description" content="EasyAsPDF is a free online PDF toolkit to merge, split, compress, watermark, rotate, and convert PDFs. Process files securely and offline in your browser." />
+    <!-- Uncomment and replace with your actual Twitter image URL -->
+    <!-- <meta property="twitter:image" content="https://easyaspdf.com/twitter-image.png" /> -->
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://easyaspdf.com/" />
+
+    <!-- Application JSON-LD structure -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "EasyAsPDF",
+        "url": "https://easyaspdf.com",
+        "description": "A powerful and free online toolkit to split, merge, compress, watermark PDFs, convert images to PDF, and extract text using AI OCR.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "creator": {
+          "@type": "Organization",
+          "name": "EasyAsPDF"
+        }
+      }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="alternate icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Unified Third-Party Script Loader (Deferred for PageSpeed Mobile Performance) -->
+    <script>
+      (function() {
+        var scriptsLoaded = false;
+        
+        function loadThirdPartyScripts() {
+          if (scriptsLoaded) return;
+          scriptsLoaded = true;
+          
+          // Remove all interaction listeners
+          window.removeEventListener('scroll', loadThirdPartyScripts);
+          window.removeEventListener('mousemove', loadThirdPartyScripts);
+          window.removeEventListener('touchstart', loadThirdPartyScripts);
+          window.removeEventListener('click', loadThirdPartyScripts);
+          
+          // 1. Load Google Tag (gtag.js) for Analytics & Google Ads
+          var gtmScript = document.createElement('script');
+          gtmScript.async = true;
+          gtmScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-1W2S75R55L';
+          document.head.appendChild(gtmScript);
+          
+          gtmScript.onload = function() {
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = function(){dataLayer.push(arguments);}
+            window.gtag('js', new Date());
+            window.gtag('config', 'G-1W2S75R55L');
+            window.gtag('config', 'AW-18130437887');
+            
+            // Process any queued conversion events
+            if (window.pendingConversions) {
+              window.pendingConversions.forEach(function(conv) {
+                window.gtag('event', 'conversion', { 'send_to': conv });
+              });
+              delete window.pendingConversions;
+            }
+          };
+          
+          // 2. Load Google AdSense Auto Ads / Verification Script
+          var adsenseScript = document.createElement('script');
+          adsenseScript.async = true;
+          adsenseScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4090577108101088';
+          adsenseScript.crossOrigin = 'anonymous';
+          document.head.appendChild(adsenseScript);
+        }
+        
+        // Register interaction event listeners
+        window.addEventListener('scroll', loadThirdPartyScripts, { passive: true });
+        window.addEventListener('mousemove', loadThirdPartyScripts, { passive: true });
+        window.addEventListener('touchstart', loadThirdPartyScripts, { passive: true });
+        window.addEventListener('click', loadThirdPartyScripts, { passive: true });
+        
+        // Fallback: load after 6 seconds of idle time if no interaction occurred
+        window.addEventListener('load', function() {
+          setTimeout(loadThirdPartyScripts, 6000);
+        });
+        
+        // Global click tracker for PDF downloads (registered immediately)
+        document.addEventListener('click', function(e) {
+          var target = e.target;
+          while (target && target !== document.body) {
+            if (target.tagName === 'A' && target.hasAttribute('download')) {
+              var convId = 'AW-18130437887/Evj5COqz97AcEP-NosVD';
+              if (window.gtag) {
+                window.gtag('event', 'conversion', { 'send_to': convId });
+              } else {
+                // Queue the conversion if scripts aren't loaded yet
+                window.pendingConversions = window.pendingConversions || [];
+                window.pendingConversions.push(convId);
+                // Force load scripts immediately
+                loadThirdPartyScripts();
+              }
+              break;
+            }
+            target = target.parentNode;
+          }
+        }, { passive: true });
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/e-index-DTnTy_Gj.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/c-react-vendor-BqqMlzf4.js">
+    <link rel="stylesheet" crossorigin href="/assets/a-index-DsJYaClJ.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
