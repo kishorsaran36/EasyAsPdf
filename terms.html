@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      // Polyfill Promise.withResolvers for compatibility with older browsers/devices
+      if (typeof Promise.withResolvers === 'undefined') {
+        Promise.withResolvers = function () {
+          var resolve;
+          var reject;
+          var promise = new Promise(function (res, rej) {
+            resolve = res;
+            reject = rej;
+          });
+          return { promise: promise, resolve: resolve, reject: reject };
+        };
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Terms of Service - Free Browser PDF Tools | EasyAsPDF</title>
+    <meta name="title" content="Terms of Service - Free Browser PDF Tools | EasyAsPDF" />
+    <meta name="description" content="Read the Terms of Service for using EasyAsPDF tools. Standard usage guidelines for our free online PDF utility suite." />
+    <meta name="keywords" content="terms of service easyaspdf" />
+    <meta name="author" content="EasyAsPDF" />
+    <meta name="language" content="English" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="theme-color" content="#fdfdfd" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    
+    <!-- DNS Prefetch for faster resolution -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    </noscript>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://easyaspdf.com/terms" />
+    <meta property="og:title" content="Terms of Service - Free Browser PDF Tools | EasyAsPDF" />
+    <meta property="og:description" content="Read the Terms of Service for using EasyAsPDF tools. Standard usage guidelines for our free online PDF utility suite." />
+    <meta property="og:site_name" content="EasyAsPDF" />
+    <meta property="og:locale" content="en_US" />
+    <!-- Uncomment and replace with your actual Open Graph image URL -->
+    <!-- <meta property="og:image" content="https://easyaspdf.com/og-image.png" /> -->
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://easyaspdf.com/terms" />
+    <meta property="twitter:title" content="Terms of Service - Free Browser PDF Tools | EasyAsPDF" />
+    <meta property="twitter:description" content="Read the Terms of Service for using EasyAsPDF tools. Standard usage guidelines for our free online PDF utility suite." />
+    <!-- Uncomment and replace with your actual Twitter image URL -->
+    <!-- <meta property="twitter:image" content="https://easyaspdf.com/twitter-image.png" /> -->
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://easyaspdf.com/terms" />
+
+    <!-- Application JSON-LD structure -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "EasyAsPDF",
+        "url": "https://easyaspdf.com",
+        "description": "A powerful and free online toolkit to split, merge, compress, watermark PDFs, convert images to PDF, and extract text using AI OCR.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "creator": {
+          "@type": "Organization",
+          "name": "EasyAsPDF"
+        }
+      }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="alternate icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Global site tag (gtag.js) - Google Analytics & Google Ads -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-1W2S75R55L"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1W2S75R55L');
+      gtag('config', 'AW-18130437887');
+      
+      // Global click tracker for PDF downloads
+      document.addEventListener('click', function(e) {
+        var target = e.target;
+        while (target && target !== document.body) {
+          if (target.tagName === 'A' && target.hasAttribute('download')) {
+            var convId = 'AW-18130437887/Evj5COqz97AcEP-NosVD';
+            gtag('event', 'conversion', { 'send_to': convId });
+            break;
+          }
+          target = target.parentNode;
+        }
+      }, { passive: true });
+    </script>
+    
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+        })(window, document, "clarity", "script", "x4qno7w1g1");
+    </script>
+    
+    <!-- Google AdSense - Deferred for Mobile PageSpeed Score Optimization -->
+    <script>
+      (function() {
+        var adsLoaded = false;
+        function loadAdSense() {
+          if (adsLoaded) return;
+          adsLoaded = true;
+          
+          window.removeEventListener('scroll', loadAdSense);
+          window.removeEventListener('mousemove', loadAdSense);
+          window.removeEventListener('touchstart', loadAdSense);
+          window.removeEventListener('click', loadAdSense);
+          
+          var adsenseScript = document.createElement('script');
+          adsenseScript.async = true;
+          adsenseScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4090577108101088';
+          adsenseScript.crossOrigin = 'anonymous';
+          document.head.appendChild(adsenseScript);
+        }
+        
+        window.addEventListener('scroll', loadAdSense, { passive: true });
+        window.addEventListener('mousemove', loadAdSense, { passive: true });
+        window.addEventListener('touchstart', loadAdSense, { passive: true });
+        window.addEventListener('click', loadAdSense, { passive: true });
+        
+        // Fallback: load after 6 seconds of idle time
+        window.addEventListener('load', function() {
+          setTimeout(loadAdSense, 6000);
+        });
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/e-index-BS5fwu4W.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/c-react-vendor-BqqMlzf4.js">
+    <link rel="stylesheet" crossorigin href="/assets/a-index-DsJYaClJ.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
