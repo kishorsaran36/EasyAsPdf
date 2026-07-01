@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        const saved = localStorage.getItem('easyaspdf-theme');
+        if (saved === 'dark' || (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+    <script>
+      // Polyfill Promise.withResolvers for compatibility with older browsers/devices
+      if (typeof Promise.withResolvers === 'undefined') {
+        Promise.withResolvers = function () {
+          var resolve;
+          var reject;
+          var promise = new Promise(function (res, rej) {
+            resolve = res;
+            reject = rej;
+          });
+          return { promise: promise, resolve: resolve, reject: reject };
+        };
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>PDF to Word Converter Free — No Signup, No Watermark, Browser-Based | EasyAsPDF</title>
+    <meta name="title" content="PDF to Word Converter Free — No Signup, No Watermark, Browser-Based | EasyAsPDF" />
+    <meta name="description" content="Convert PDF documents to editable Microsoft Word files (.docx) online for free without formatting loss. Secure and signup-free." />
+    <meta name="author" content="EasyAsPDF" />
+    <meta name="language" content="English" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="theme-color" content="#fdfdfd" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    
+    <!-- DNS Prefetch for faster resolution -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    </noscript>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://easyaspdf.com/pdf-to-word" />
+    <meta property="og:title" content="PDF to Word Converter Free — No Signup, No Watermark, Browser-Based | EasyAsPDF" />
+    <meta property="og:description" content="Convert PDF documents to editable Microsoft Word files (.docx) online for free without formatting loss. Secure and signup-free." />
+    <meta property="og:site_name" content="EasyAsPDF" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://easyaspdf.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://easyaspdf.com/pdf-to-word" />
+    <meta property="twitter:title" content="PDF to Word Converter Free — No Signup, No Watermark, Browser-Based | EasyAsPDF" />
+    <meta property="twitter:description" content="Convert PDF documents to editable Microsoft Word files (.docx) online for free without formatting loss. Secure and signup-free." />
+    <meta property="twitter:image" content="https://easyaspdf.com/og-image.png" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://easyaspdf.com/pdf-to-word" />
+
+    <!-- Application JSON-LD structure -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "EasyAsPDF",
+        "url": "https://easyaspdf.com",
+        "description": "A powerful and free online toolkit to split, merge, compress, watermark PDFs, convert images to PDF, and extract text using AI OCR.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "creator": {
+          "@type": "Organization",
+          "name": "EasyAsPDF"
+        }
+      }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="alternate icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="alternate icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Google Analytics stub — keeps gtag() callable immediately for event queuing -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1W2S75R55L');
+      gtag('config', 'AW-18130437887');
+
+      // Global click tracker for PDF downloads — must be active from first interaction
+      document.addEventListener('click', function(e) {
+        var target = e.target;
+        while (target && target !== document.body) {
+          if (target.tagName === 'A' && target.hasAttribute('download')) {
+            gtag('event', 'conversion', { 'send_to': 'AW-18130437887/Evj5COqz97AcEP-NosVD' });
+            break;
+          }
+          target = target.parentNode;
+        }
+      }, { passive: true });
+    </script>
+
+    <!-- Deferred third-party scripts (GA, Clarity, AdSense) —
+         Loaded on first user interaction or after 4 seconds to maximise
+         Lighthouse / PageSpeed scores without losing any data. -->
+    <script>
+      (function () {
+        var loaded = false;
+        function loadThirdParty() {
+          if (loaded) return;
+          loaded = true;
+          ['scroll', 'mousemove', 'touchstart', 'click', 'keydown'].forEach(function (ev) {
+            window.removeEventListener(ev, loadThirdParty);
+          });
+
+          // Google Analytics & Google Ads
+          var gaScript = document.createElement('script');
+          gaScript.async = true;
+          gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-1W2S75R55L';
+          document.head.appendChild(gaScript);
+
+          // Microsoft Clarity
+          (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, 'clarity', 'script', 'x4qno7w1g1');
+
+          // Google AdSense
+          var adsScript = document.createElement('script');
+          adsScript.async = true;
+          adsScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4090577108101088';
+          adsScript.crossOrigin = 'anonymous';
+          document.head.appendChild(adsScript);
+        }
+
+        // Trigger on first interaction
+        ['scroll', 'mousemove', 'touchstart', 'click', 'keydown'].forEach(function (ev) {
+          window.addEventListener(ev, loadThirdParty, { once: true, passive: true });
+        });
+
+        // Hard fallback: load after 4 seconds regardless
+        setTimeout(loadThirdParty, 4000);
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/e-index-KQGJDSpL.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/c-react-vendor-BqqMlzf4.js">
+    <link rel="stylesheet" crossorigin href="/assets/a-index-BP1hLMd1.css">
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>
+
