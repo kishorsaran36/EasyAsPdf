@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      (function() {
+        const saved = localStorage.getItem('easyaspdf-theme');
+        if (saved === 'dark' || (!saved && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+    <script>
+      // Polyfill Promise.withResolvers for compatibility with older browsers/devices
+      if (typeof Promise.withResolvers === 'undefined') {
+        Promise.withResolvers = function () {
+          var resolve;
+          var reject;
+          var promise = new Promise(function (res, rej) {
+            resolve = res;
+            reject = rej;
+          });
+          return { promise: promise, resolve: resolve, reject: reject };
+        };
+      }
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Primary Meta Tags -->
+    <title>Compresser un PDF à moins de 100KB en ligne gratuit | EasyAsPDF</title>
+    <meta name="title" content="Compresser un PDF à moins de 100KB en ligne gratuit | EasyAsPDF" />
+    <meta name="description" content="Réduisez la taille de vos fichiers PDF à moins de 100KB en ligne gratuitement et sans perte de qualité. Compression de PDF sécurisée et locale." />
+    <meta name="author" content="EasyAsPDF" />
+    <meta name="language" content="English" />
+    <meta name="robots" content="index, follow" />
+    <meta name="revisit-after" content="7 days" />
+    <meta name="theme-color" content="#fdfdfd" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    
+    <!-- DNS Prefetch for faster resolution -->
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    </noscript>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://easyaspdf.com/fr/compress-pdf-to-100kb/" />
+    <meta property="og:title" content="Compresser un PDF à moins de 100KB en ligne gratuit | EasyAsPDF" />
+    <meta property="og:description" content="Réduisez la taille de vos fichiers PDF à moins de 100KB en ligne gratuitement et sans perte de qualité. Compression de PDF sécurisée et locale." />
+    <meta property="og:site_name" content="EasyAsPDF" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://easyaspdf.com/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://easyaspdf.com/fr/compress-pdf-to-100kb/" />
+    <meta property="twitter:title" content="Compresser un PDF à moins de 100KB en ligne gratuit | EasyAsPDF" />
+    <meta property="twitter:description" content="Réduisez la taille de vos fichiers PDF à moins de 100KB en ligne gratuitement et sans perte de qualité. Compression de PDF sécurisée et locale." />
+    <meta property="twitter:image" content="https://easyaspdf.com/og-image.png" />
+
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://easyaspdf.com/fr/compress-pdf-to-100kb/" />
+
+    <!-- Application JSON-LD structure -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "EasyAsPDF",
+        "url": "https://easyaspdf.com",
+        "description": "A powerful and free online toolkit to split, merge, compress, watermark PDFs, convert images to PDF, and extract text using AI OCR.",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "creator": {
+          "@type": "Organization",
+          "name": "EasyAsPDF"
+        }
+      }
+    </script>
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/png" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    <!-- Google Analytics stub — keeps gtag() callable immediately for event queuing -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-1W2S75R55L');
+      gtag('config', 'AW-18130437887');
+
+      // Global click tracker for PDF downloads — must be active from first interaction
+      document.addEventListener('click', function(e) {
+        var target = e.target;
+        while (target && target !== document.body) {
+          if (target.tagName === 'A' && target.hasAttribute('download')) {
+            gtag('event', 'conversion', { 'send_to': 'AW-18130437887/Evj5COqz97AcEP-NosVD' });
+            break;
+          }
+          target = target.parentNode;
+        }
+      }, { passive: true });
+    </script>
+
+    <!-- Deferred third-party scripts (GA, Clarity, AdSense) —
+         Loaded on first user interaction or after 4 seconds to maximise
+         Lighthouse / PageSpeed scores without losing any data. -->
+    <script>
+      (function () {
+        var loaded = false;
+        function loadThirdParty() {
+          if (loaded) return;
+          loaded = true;
+          ['scroll', 'mousemove', 'touchstart', 'click', 'keydown'].forEach(function (ev) {
+            window.removeEventListener(ev, loadThirdParty);
+          });
+
+          // Google Analytics & Google Ads
+          var gaScript = document.createElement('script');
+          gaScript.async = true;
+          gaScript.src = 'https://www.googletagmanager.com/gtag/js?id=G-1W2S75R55L';
+          document.head.appendChild(gaScript);
+
+          // Microsoft Clarity
+          (function(c,l,a,r,i,t,y){
+            c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+            t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;
+            y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+          })(window, document, 'clarity', 'script', 'x4qno7w1g1');
+
+          // Google AdSense
+          var adsScript = document.createElement('script');
+          adsScript.async = true;
+          adsScript.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4090577108101088';
+          adsScript.crossOrigin = 'anonymous';
+          document.head.appendChild(adsScript);
+        }
+
+        // Trigger on first interaction
+        ['scroll', 'mousemove', 'touchstart', 'click', 'keydown'].forEach(function (ev) {
+          window.addEventListener(ev, loadThirdParty, { once: true, passive: true });
+        });
+
+        // Hard fallback: load after 4 seconds regardless
+        setTimeout(loadThirdParty, 4000);
+      })();
+    </script>
+    <script type="module" crossorigin src="/assets/e-index-BYYnntXE.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/c-react-vendor-BqqMlzf4.js">
+    <link rel="stylesheet" crossorigin href="/assets/a-index-BjiCGvm3.css">
+  </head>
+  <body>
+    <div id="root">
+<div style="font-family: system-ui, -apple-system, sans-serif; max-width: 800px; margin: 40px auto; padding: 24px; color: #1e293b; line-height: 1.6;">
+  <header style="margin-bottom: 32px; text-align: center;">
+    <h1 style="font-size: 2.25rem; font-weight: 800; color: #0f172a; margin-bottom: 12px; letter-spacing: -0.025em;">Compresser un PDF à moins de 100KB en ligne gratuit</h1>
+    <p style="font-size: 1.125rem; color: #64748b; max-width: 600px; margin: 0 auto; line-height: 1.5;">Réduisez la taille de vos fichiers PDF à moins de 100KB en ligne gratuitement et sans perte de qualité. Compression de PDF sécurisée et locale.</p>
+  </header>
+  <main>
+    <section style="background-color: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; padding: 24px; margin-bottom: 32px;">
+      <h2 style="font-size: 1.25rem; font-weight: 700; color: #0f172a; margin-top: 0; margin-bottom: 16px;">How to use this tool:</h2>
+      <ol style="margin: 0; padding-left: 20px; font-size: 1rem; color: #334155; display: flex; flex-direction: column; gap: 8px;">
+        
+      <li>Upload the PDF document you want to compress.</li>
+      <li>Select your preferred compression quality (Extreme, Recommended, or target a specific size).</li>
+      <li>Click the Compress button and download your smaller PDF.</li>
+    
+      </ol>
+    </section>
+    
+    <section style="margin-top: 40px; border-top: 1px solid #e2e8f0; padding-top: 32px;">
+      <h2 style="font-size: 1.5rem; font-weight: 700; color: #0f172a; margin-top: 0; margin-bottom: 20px;">Frequently Asked Questions</h2>
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        
+    <div style="margin-bottom: 20px;">
+      <h3 style="font-size: 1.05rem; font-weight: 600; color: #1e293b; margin-top: 0; margin-bottom: 6px;">Is this PDF compressor safe to use?</h3>
+      <p style="font-size: 0.95rem; color: #475569; margin: 0; line-height: 1.5;">Yes. All file compression is executed entirely inside your browser using local JavaScript/WebAssembly capabilities. Your files are never uploaded to our servers, keeping your documents 100% private.</p>
+    </div>
+  
+    <div style="margin-bottom: 20px;">
+      <h3 style="font-size: 1.05rem; font-weight: 600; color: #1e293b; margin-top: 0; margin-bottom: 6px;">Will compressing my PDF reduce text quality?</h3>
+      <p style="font-size: 0.95rem; color: #475569; margin: 0; line-height: 1.5;">No. Our intelligent compression downsamples high-resolution embedded images while keeping text vectors, links, and structure perfectly intact, ensuring your document remains readable.</p>
+    </div>
+  
+    <div style="margin-bottom: 20px;">
+      <h3 style="font-size: 1.05rem; font-weight: 600; color: #1e293b; margin-top: 0; margin-bottom: 6px;">What compression profiles do you offer?</h3>
+      <p style="font-size: 0.95rem; color: #475569; margin: 0; line-height: 1.5;">We support Extreme compression (highest size reduction, lower image resolution), Recommended compression (optimal balance), and Low compression (highest visual quality).</p>
+    </div>
+  
+      </div>
+    </section>
+  
+    <section style="text-align: center; color: #64748b; font-size: 0.875rem; border-top: 1px solid #e2e8f0; padding-top: 24px; margin-top: 32px;">
+      <p style="margin-bottom: 8px;"><strong>100% Private Client-Side Processing:</strong> All files are processed completely inside your browser using local capabilities. We never upload your documents to our servers.</p>
+      <p style="font-size: 0.75rem; color: #94a3b8;">&copy; 2026 EasyAsPDF. All rights reserved.</p>
+    </section>
+  </main>
+</div>
+  </div>
+  </body>
+</html>
+
